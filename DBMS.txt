@@ -1,0 +1,68 @@
+How to delete:
+delete from instructor where name='katz'; 
+use DUniversity;
+
+** we dont use where with outer join
+
++How to use inner join:
+select instructor.ID, name, dept_name, salary, sec_id, semester, year from instructor inner join teaches where instructor.ID=teaches.ID;
+
++How to use outer join:
+select * from instructor right outer join instructor on instructor.ID=teaches.ID;
+
++there is no fulll outer join in sql.
+
++to get it use UNION between left and right
+
++How to do natural left/right outer join
+select * from instructor natural left outer join teaches where course_id is null;
+
++How to create view:
+create view faculty1 as select ID, name, dept_name from instructor;
+insert into faculty1 values (120,'manich','music');
+
+
+++The form clause has one database relation;
+++The select clase cotians only the att names of the relation, and does not have any expressions,aggregates, or distinct specification.
+++Any att not listed in the select clause can be set to null; that is; it doesnot have a not nullconstraint and is not part of primiry key.
+++The query doesnot have a group by or having clause.
+
++Auto commit:
++Roll Back: go back to the same state on which the database is same as b4.
++Autocommit: remove infected in the table.edx
+
+Set autocommit=0;
+insert into faculty values(999,'chy','music');
+select*from faculty ;
+commit;
+
++ presentation
+create table classroom(building carchar(15), room_number varchar(7)
+
++on delete set null: is use to put null to the att on delete one.
++check : check constraints.
+
++in :constraint is use when whatever condition is used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
